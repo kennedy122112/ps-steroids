@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="ps-steroids: de tu idea o tus fotos a Photoshop">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#001e36"/>
+      <stop offset="1" stop-color="#0b3d66"/>
+    </linearGradient>
+    <linearGradient id="lienzo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f4fd1"/>
+      <stop offset="1" stop-color="#0f1b3d"/>
+    </linearGradient>
+    <clipPath id="circulo"><circle cx="756" cy="152" r="44"/></clipPath>
+  </defs>
+  <rect width="1200" height="320" rx="18" fill="url(#fondo)"/>
+
+  <text x="64" y="128" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="64" font-weight="700" fill="#ffffff">ps-steroids</text>
+  <text x="66" y="178" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="24" fill="#cfe6fb">Tu agente de IA diseña en Photoshop</text>
+  <text x="66" y="212" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="24" fill="#cfe6fb">desde tu idea o desde tus fotos.</text>
+  <text x="66" y="262" font-family="Consolas, monospace" font-size="18" fill="#31a8ff">local · sin MCP · sin API key · Windows y macOS</text>
+
+  <!-- Mini lienzo: una pieza para redes -->
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <rect x="640" y="48" width="224" height="224" rx="6" fill="url(#lienzo)" stroke="#31a8ff" stroke-opacity=".5"/>
+    <text x="658" y="80" font-size="10" font-weight="700" fill="#7fb3ff" letter-spacing="2">TALLER GRATUITO</text>
+    <text x="658" y="106" font-size="19" font-weight="800" fill="#ffffff">IA aplicada</text>
+    <text x="658" y="128" font-size="19" font-weight="800" fill="#ffffff">al trabajo</text>
+    <circle cx="756" cy="152" r="47" fill="#ffffff" transform="translate(52 34)"/>
+    <g clip-path="url(#circulo)" transform="translate(52 34)">
+      <rect x="712" y="108" width="88" height="88" fill="#8fb8de"/>
+      <circle cx="756" cy="140" r="17" fill="#f2d3b3"/>
+      <ellipse cx="756" cy="196" rx="34" ry="28" fill="#2d4f7a"/>
+    </g>
+    <rect x="658" y="230" width="94" height="26" rx="13" fill="#ffb703"/>
+    <text x="705" y="247" font-size="11" font-weight="700" fill="#0f1b3d" text-anchor="middle">Inscríbete</text>
+  </g>
+
+  <!-- Panel de capas -->
+  <g font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">
+    <rect x="896" y="48" width="252" height="224" rx="6" fill="#1e1e1e" stroke="#3a3a3a"/>
+    <text x="912" y="72" font-size="12" font-weight="600" fill="#bdbdbd">Capas</text>
+    <line x1="896" y1="82" x2="1148" y2="82" stroke="#3a3a3a"/>
+    <g fill="#e6e6e6">
+      <rect x="904" y="90" width="236" height="30" rx="3" fill="#0b3d66"/>
+      <text x="914" y="110" font-weight="700" fill="#31a8ff">T</text><text x="936" y="110">Título</text>
+      <rect x="914" y="128" width="14" height="14" rx="4" fill="#ffb703"/><text x="936" y="140">Botón</text>
+      <rect x="914" y="158" width="14" height="14" fill="#8fb8de"/><text x="936" y="170">Foto ponente</text>
+      <text x="1118" y="170" font-size="11" fill="#9e9e9e">fx</text>
+      <circle cx="921" cy="195" r="7" fill="#ffffff"/><text x="936" y="200">Círculo foto</text>
+      <rect x="914" y="218" width="14" height="14" fill="url(#lienzo)"/><text x="936" y="230">Brillo</text>
+      <rect x="914" y="248" width="14" height="14" fill="#0f1b3d" stroke="#555"/><text x="936" y="260">Fondo</text>
+    </g>
+  </g>
+</svg>
