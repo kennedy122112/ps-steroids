@@ -1,6 +1,6 @@
 ---
 name: ps-connect
-description: Conecta el agente con Adobe Photoshop abierto en esta PC (API COM, sin MCP) y fija el documento de trabajo. Úsala cuando el usuario diga "conecta con Photoshop", "trabaja en mi Photoshop", "abre esta imagen en Photoshop", cuando un comando ps-cli falle por conexión, o antes de cualquier tarea de diseño o edición en Photoshop.
+description: Conecta el agente con Adobe Photoshop abierto en esta PC o Mac (COM en Windows, AppleScript en macOS, sin MCP) y fija el documento de trabajo. Úsala cuando el usuario diga "conecta con Photoshop", "trabaja en mi Photoshop", "abre esta imagen en Photoshop", cuando un comando ps-cli falle por conexión, o antes de cualquier tarea de diseño o edición en Photoshop.
 ---
 
 # Conectar con Photoshop

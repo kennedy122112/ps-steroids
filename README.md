@@ -15,7 +15,7 @@ OpenCode, Antigravity) a trabajar en **Adobe Photoshop** abierto en tu PC:
 - 🎨 **Diseña** posts, stories, banners, flyers y portadas a partir de lo que describes por chat.
 - 🖼️ **Compone con tus imágenes**: las coloca como objetos inteligentes, recorta, quita el fondo, ajusta color.
 - ✏️ **Edita** fotos y plantillas PSD: cambia textos por nombre de capa, pone logo o marca de agua y saca la pieza en varios tamaños.
-- 🔍 **Lee y audita** PSD: capas, textos, fuentes que faltan, problemas.
+- 🔍 **Lee y audita** PSD: capas, textos, fuentes que faltan, problemas. También **sin Photoshop** (Python + psd-tools).
 - 👀 **Revisa su propio trabajo**: saca una vista previa, la mira y corrige antes de entregártelo.
 
 Todo queda en capas con nombre (formas vectoriales, texto editable, objetos inteligentes, capas de ajuste),
@@ -33,25 +33,39 @@ y cada diseño es un paso del historial: Ctrl+Z lo deshace.
 
 ## ⚙️ Cómo funciona
 
-`bin/ps-cli.ps1` es un puente PowerShell sin dependencias. Habla con Photoshop por su API COM
-(`Photoshop.Application`) y ejecuta ExtendScript dentro de Photoshop. El agente describe el diseño
-en un **spec JSON** (capas de abajo hacia arriba) y `ps-cli build` lo construye.
+El agente describe el diseño en un **spec JSON** (capas de abajo hacia arriba) y `ps-cli build` lo
+construye dentro de Photoshop con ExtendScript. El trabajo lo hacen los scripts de `bin/jsx/`,
+iguales en los dos sistemas; cambia solo el puente, y ninguno necesita instalar nada:
+
+| Sistema | Puente | Cómo habla con Photoshop |
+|---|---|---|
+| Windows | `bin/ps-cli.ps1` (PowerShell) | API COM `Photoshop.Application` |
+| macOS | `bin/ps-cli.sh` (bash) | AppleScript `do javascript` (`osascript`) |
 
 ```
-ps-cli status | open | read | fonts | build | preview | export | jsx
+ps-cli status | open | read | fonts | build | preview | export | jsx | inspect
 ```
+
+`inspect` lee PSD sin Photoshop (`bin/psd_read.py`, requiere Python 3 y `pip install psd-tools`).
 
 Ejemplo de spec: [examples/post-evento/spec.json](examples/post-evento/spec.json).
 
 ## 📦 Instalación
 
-Requisitos: Windows, Adobe Photoshop 2021 (v22) o posterior.
+Requisitos: Adobe Photoshop 2021 (v22) o posterior, en Windows o macOS.
 
+**Windows** (PowerShell):
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File install.ps1
+irm https://raw.githubusercontent.com/kennedy122112/ps-steroids/main/install.ps1 | iex
 ```
 
-Abre una sesión nueva en tu agente y pídele: «conecta con Photoshop».
+**macOS** (Terminal):
+```bash
+curl -fsSL https://raw.githubusercontent.com/kennedy122112/ps-steroids/main/install.sh | bash
+```
+
+Abre una sesión nueva en tu agente y pídele: «conecta con Photoshop». En Mac, la primera vez el sistema
+pregunta si el agente puede controlar Photoshop: responde **Aceptar**.
 
 ## Límites
 

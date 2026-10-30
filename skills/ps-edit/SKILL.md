@@ -54,7 +54,7 @@ function walk(c){ for (var i = 0; i < c.length; i++) { var l = c[i];
 __main(function(){ walk(app.activeDocument.layers); for (var k in CAMBIOS) W.push('No encontré la capa: ' + k); return {}; });
 
 // Reemplazar el contenido de un objeto inteligente (mockups) — capa activa
-var NUEVO = 'C:\\ruta\\imagen.png';
+var NUEVO = 'C:/ruta/imagen.png';   // en macOS: '/Users/ana/ruta/imagen.png'
 __main(function(){ var d = new ActionDescriptor(); d.putPath(cTID('null'), new File(NUEVO));
   executeAction(sTID('placedLayerReplaceContents'), d, DialogModes.NO); return {}; });
 
