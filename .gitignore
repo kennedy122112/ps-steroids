@@ -1,0 +1,4 @@
+*.psd
+*.png
+*.jpg
+!examples/**/*.png

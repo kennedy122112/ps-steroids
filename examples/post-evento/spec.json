@@ -1,0 +1,19 @@
+{
+  "document": { "name": "Post - Taller de IA", "width": 1080, "height": 1080, "resolution": 72, "background": "#0f1b3d" },
+  "layers": [
+    { "type": "gradient", "name": "Brillo", "colors": ["#1f4fd1", "#0f1b3d"], "angle": 135, "style": "radial", "opacity": 70 },
+    { "type": "ellipse", "name": "Círculo foto", "x": 560, "y": 300, "w": 440, "h": 440, "color": "#ffffff" },
+    { "type": "image", "name": "Foto ponente", "src": "entrada/ponente.jpg", "x": 560, "y": 300, "w": 440, "h": 440, "fit": "cover", "clip": true,
+      "adjust": { "contrast": 10, "saturation": -15 } },
+    { "type": "group", "name": "Textos", "layers": [
+      { "type": "text", "name": "Etiqueta", "text": "TALLER GRATUITO", "x": 80, "y": 120, "w": 600, "h": 60,
+        "font": "Montserrat-Bold", "size": 30, "color": "#7fb3ff", "tracking": 200 },
+      { "type": "text", "name": "Título", "text": "IA aplicada\nal trabajo diario", "x": 80, "y": 190, "w": 480, "h": 300,
+        "font": "Montserrat-ExtraBold", "size": 76, "leading": 84, "color": "#ffffff" },
+      { "type": "rect", "name": "Botón", "x": 80, "y": 840, "w": 360, "h": 96, "radius": 48, "color": "#ffb703",
+        "shadow": { "opacity": 30, "distance": 10, "size": 30 } },
+      { "type": "text", "name": "Botón texto", "text": "Inscríbete hoy", "x": 80, "y": 866, "w": 360, "h": 60,
+        "font": "Montserrat-Bold", "size": 34, "color": "#0f1b3d", "align": "center" }
+    ] }
+  ]
+}
